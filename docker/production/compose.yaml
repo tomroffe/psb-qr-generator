@@ -1,0 +1,12 @@
+name: psbqr.roffe.uk
+services:
+  psbqr-roffe-uk:
+    build:
+      context: ../../
+      dockerfile: docker/production/Dockerfile
+    image: ghcr.io/tomroffe/psb-qr-generator:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+
